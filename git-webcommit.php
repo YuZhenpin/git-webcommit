@@ -4,20 +4,20 @@
 	/// settings ///
 
 	// configure the list of repositories, only one support at the moment
-	$repos = Array ('/tmp/git-webcommit');
+	$repos = Array ('/workspace');
 
 	// set the default repository, you probably want to keep it set to 0
 	$defaultrepo = 0;
 
 	// configure the authentication method:
-	$authmethod = 'httpbasic';
+//	$authmethod = 'httpbasic';
 //	$authmethod = 'htpasswd';
-//	$authmethod = 'none';
+	$authmethod = 'none';
 
 	// when using htpasswd, the 'pass' entry isn't needed
 	// 'name' and 'email' are required.
 	$auth = Array (
-		'testuser2' => Array ('pass' => 'a94a8fe5ccb19ba61c4c0873d391e987982fbbd3', 'name' => 'Test User', 'email' => 'test@somewhere')
+		'testuser2' => Array ('pass' => '3bbe89172c5b7909d57baaa6c9e32a13bc7e6def', 'name' => 'Test User', 'email' => 'test@somewhere')
 	);
 
 	// passwords are sha1 hashes, uncomment next line to create the password hash:
@@ -1328,7 +1328,7 @@ $str = <<<HERE
 <input id="${prefix}_filename" type="hidden" name="filename[]" value="$filename">
 <input id="${prefix}_hash" type="hidden" name="hash[]" value="$hash">
 <input id="${prefix}_prefix" type="hidden" name="prefix[]" value="$prefix">
-<textarea id="${prefix}_textarea">$diff</textarea>
+<textarea id="${prefix}_textarea"></textarea>
 <script>$js</script></div>
 HERE;
 
